@@ -55,7 +55,7 @@ plt.plot(x, recurTimeArray, label="recursive approach")
 plt.plot(x, iterTimeArray, label="iterative approach")
 
 plt.xlabel('number')
-plt.ylabel('time to execute')
+plt.ylabel('time to execute/ns')
 
 plt.title('Fibbonacci number execution')
 plt.legend()
