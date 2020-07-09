@@ -45,7 +45,7 @@ for i in range(1,41):
 
 #printing values
 for i in range(40):
-    print(""+str(i)+" recur: "+str(recurTimeArray[i])+"ns, iter: "+str(iterTimeArray[i])+"ns")
+    print(""+str(i+1)+" recur: "+str(recurTimeArray[i])+"ns, iter: "+str(iterTimeArray[i])+"ns")
 
 
 # plotting graph
