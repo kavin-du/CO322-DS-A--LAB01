@@ -22,9 +22,9 @@ def fib_i(x) :
         
     return fib
 
-x = 40
-print ("Fib of " + str(x) + " = " + str(fib_r(x)))
-print ("Fib of " + str(x) + " = " + str(fib_i(x)))
+# x = 40
+# print ("Fib of " + str(x) + " = " + str(fib_r(x)))
+# print ("Fib of " + str(x) + " = " + str(fib_i(x)))
 
 recurTimeArray = []
 iterTimeArray = []
@@ -43,9 +43,21 @@ for i in range(1,41):
 
     iterTimeArray.append((iterEndTime-iterStartTime)*(10**9))
 
+#printing values
+for i in range(40):
+    print(""+str(i)+" recur: "+str(recurTimeArray[i])+"ns, iter: "+str(iterTimeArray[i])+"ns")
+
+
+# plotting graph
 x = np.arange(1, 41, 1) # x axis
 
+plt.plot(x, recurTimeArray, label="recursive approach")
+plt.plot(x, iterTimeArray, label="iterative approach")
 
+plt.xlabel('number')
+plt.ylabel('time to execute')
 
-
+plt.title('Fibbonacci number execution')
+plt.legend()
+plt.show()
 
